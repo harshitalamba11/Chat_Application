@@ -160,3 +160,26 @@ body{
     text-align:center;
     font-size: 17px;
 }
+.attach-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    color: #7e7e7e;
+    padding:3px;
+    margin: 8px;
+
+    /* background-color: #f6f6f6; */
+}
+.emoji-picker{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    color: #7e7e7e;
+    margin: 8px;
+    /* background-color: #f6f6f6; */
+
+}

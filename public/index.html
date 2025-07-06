@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat App</title>
     <link rel="stylesheet" href="style.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@4.6.4/dist/index.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@4.6.4/dist/index.min.js"></script>
+
 </head>
 <body>
     <h1 class="title">iChat🗨️</h1>
@@ -43,10 +46,14 @@
         <form  class="message-form" id="message-form">
             <input type="text" name="message" id="message-input">
             <div class="v-divider"></div>
+            <div class="attach-icon"><i class="fas fa-paperclip"></i></div>
+            <div class="emoji-picker" id="emoji-button">
+    <i class="fas fa-smile"></i>
+</div>
+
             <button type="submit" class="send-button">Send <span><i class="fas fa-paper-plane"></i></span></button>
         </form>
 
-        
         
 
     </div>
@@ -57,16 +64,17 @@
     <script>
         // Get name from URL query parameter
         const params = new URLSearchParams(window.location.search);
-const name = params.get('name');
-const icon = params.get('icon') || 'fa-user';
+        const name = params.get('name');
+        const icon = params.get('icon') || 'fa-user';
 
-if (name) {
-    document.title = `Chat - ${name}`;
-    document.getElementById("name-input").value = name;
+        if (name) {
+            document.title = `Chat - ${name}`;
+            document.getElementById("name-input").value = name;
 
-    const iconElement = document.getElementById("icon");
-    iconElement.className = `fas ${icon}`;
-}
+            const iconElement = document.getElementById("icon");
+            iconElement.className = `fas ${icon}`;
+        }   
+
 
     </script>
 </body>
