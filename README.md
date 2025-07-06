@@ -1,4 +1,4 @@
-<h1>📦 Real-Time Chat App</h1>h1>
+<h1>📦 Real-Time Chat App</h1>
 A real-time chat application built with Node.js, Express, and Socket.IO, enabling instant messaging between multiple connected clients. It supports:
 
 Live message broadcasting
