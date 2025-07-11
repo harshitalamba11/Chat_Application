@@ -6,86 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat App</title>
     <link rel="stylesheet" href="style2.css">
+    
 </head>
 <body>
     <h1 class="title">iChat🗨️</h1>
     <div class="main">
         <div class="name">
-            <span><i class="fa-solid fa-user"></i></span>
-            <input type="text" id="name-input" class="name-input" value="anonymous" >
-            <p id="cross-btn" class="cross-symbol">&times;</p>
-        </div>
-        <!-- <div class="search-container">
-            <input type="text" id="search-input" placeholder="Search for a user...">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </div> -->
-        <div class="message-container" id="message-container">
-        <ul id="box" class="box">
-            <div class="box-tag">
-                <span style="font-size: 24px;">👩‍🦰</span>
-            <p class="name">Ridhima</p>
-            </div>
+            <h3>Welcome to iChat🗨️</h3>
             
-        </ul>
-        <ul id="box" class="box">
-            <div class="box-tag">
-                <span style="font-size: 24px;">👩</span>
-            <p class="name">John</p>
-            </div>
-        </ul>
-        <ul id="box" class="box">
-            <div class="box-tag">
-                <span style="font-size: 24px;">👨</span>
-            <p class="name">Jane</p>
-            </div>
-        </ul>
-        <ul id="box" class="box">
-            <div class="box-tag">
-                <span style="font-size: 24px;">🧑</span>
-            <p class="name">Doe</p>
-            </div>
-        </ul>
-        <ul id="box" class="box">
-            <div class="box-tag">
-                <span style="font-size: 24px;">👧</span>
-            <p class="name">Smith</p>
-            </div>
-        </ul>
-        <ul id="box" class="box">
-            <div class="box-tag">
-                <span style="font-size: 24px;">👦</span>
-            <p class="name">Emily</p>
-            </div>
-        </ul>
-        <ul id="box" class="box">
-            <div class="box-tag" >
-                <span style="font-size: 24px;">👵</span>
-            <p class="name">Michael</p>
-            </div>
-        </ul>
-        <ul id="box" class="box">
-            <div class="box-tag">
-                <span style="font-size: 24px;">👴</span>
-            <p class="name">Sarah</p>
-            </div>
-        </ul>
-        <ul id="box" class="box">
-            <div class="box-tag">
-                <span style="font-size: 24px;">🧓</span>
-            <p class="name">David</p>
-            </div>
-        </ul>
+        </div>
+       
+        <div class="message-container" id="message-container">
+        
         </div>
         
 
     </div>
+     <div id="themeToggle">
+  <i class="fas fa-sun" id="themeIcon"></i>
+</div>
+    <script src="https://cdn.jotfor.ms/s/umd/latest/for-embedded-agent.js"></script>
+<script src="person.js"></script>
     <!-- <h3 class="clients-total" id="clients-total">Total Clients: <p id="connections">2</p></h3> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="main2.js"></script>
     <script>
+// <script>
+    const main = document.querySelector('.main');
+    const messageContainer = document.getElementById('message-container');
+    const head=document.querySelector('.name h3');
+    document.getElementById("themeToggle").onclick = function () {
+      const icon = document.getElementById("themeIcon");
+      if (icon.classList.contains("fa-moon")) {
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+        head.style.color = "#7e7e7e"; // dark
+        main.style.backgroundColor = "transparent"; // light
+        messageContainer.style.backgroundColor = "#f6f6f6"; // light
 
-</script>
+      } else {
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+        main.style.backgroundColor = "#565756"; // dark
+        head.style.color = "white"; // dark
+        messageContainer.style.backgroundColor = "#2d2d2d"; // dark
+      }
+    };
+  
+// </script>
 
 
 </body>

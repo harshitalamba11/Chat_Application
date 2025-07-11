@@ -107,3 +107,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const crossBtn = document.querySelector(".left-arrow");
+    if (crossBtn) {
+        crossBtn.addEventListener("click", function () {
+            window.location.href = "index2.html";
+        });
+    }
+});

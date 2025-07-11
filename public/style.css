@@ -183,3 +183,22 @@ body{
     /* background-color: #f6f6f6; */
 
 }
+#icon {
+  font-size: 32px; /* Increased from 24px */
+  width: 48px;
+  height: 48px;                        
+  border-radius: 50%;
+  padding: 4px;
+  margin-left: 8px; /* Space between emoji and name */
+  background-color: rgb(250, 225, 192);
+  margin-right: 2px; /* More space between emoji and name */
+}
+.left-arrow{
+    font-size: 24px;
+    color: #7e7e7e;
+    cursor: pointer;
+    margin-right: 8px;
+    margin-top: 4px;
+    padding: 4px;
+    border-radius: 50%;
+}

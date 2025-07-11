@@ -14,6 +14,7 @@
     <h1 class="title">iChat🗨️</h1>
     <div class="main">
         <div class="name">
+            <span class="left-arrow"><strong>&#8592;</strong></span>
             <span><i id="icon"></i></span>
             <input type="text" id="name-input" class="name-input" value="anonymous" >
             <p id="cross-btn" class="cross-symbol">&times;</p>
@@ -26,15 +27,11 @@
             </div>
             <li class="message-left">
                 <p class="message">
-                    <!-- lorem impsum -->
-                    <!-- <span>bluebird [ 26 July 10:40 ]</span> -->
                 </p>
             </li>
 
             <li class="message-right">
                 <p class="message">
-                    <!-- lorem impsum -->
-                    <!-- <span>bluebird [ 26 July 10:40 ]</span> -->
                 </p>
             </li>
 
@@ -62,19 +59,19 @@
     <script src="/socket.io/socket.io.js"></script>
     <script src="main.js"></script>
     <script>
-        // Get name from URL query parameter
         const params = new URLSearchParams(window.location.search);
         const name = params.get('name');
-        const icon = params.get('icon') || 'fa-user';
+        const icon = params.get('icon'); // this is now an emoji
 
-        if (name) {
-            document.title = `Chat - ${name}`;
-            document.getElementById("name-input").value = name;
+        document.title = `Chat - ${name}`;
+        document.getElementById("name-input").value = name;
+        document.getElementById("icon").textContent = icon;
 
-            const iconElement = document.getElementById("icon");
-            iconElement.className = `fas ${icon}`;
+
+        function goBack() {
+            
+
         }   
-
 
     </script>
 </body>
